@@ -1,0 +1,88 @@
+
+<html lang="en-US" dir="ltr">
+	<head>
+		<meta charset="UTF-8"/>
+		<style>
+			#userinfo
+			{
+				margin:15px 100px 20px 130px;
+				padding:5px;
+				background-color:#eeeeee;
+			}
+		</style>
+		<link rel="stylesheet" href="common.css"/>
+		<link rel="stylesheet" href="homepage.css"/>
+		<script type="text/javascript" src="scripts.js">
+		</script>
+	</head>
+
+	<body>
+		<header id="header">
+			<nav id="top_navigation">
+				<ul id="toplist">
+					<li><a href="home.php">Home</a></li>
+					<li><a href="profile.php?id={userid}">Profile</a></li>
+					<li><a href="#">Settings</a></li>
+					<li><a href="logout.php">Logout</a></li>
+				</ul>
+			</nav>
+		</header>
+	
+			<script type="text/javascript">
+			window.onload=function()
+				{
+					showProfilePosts({id});
+				}
+		</script>
+		<div id="main">
+			<div id="main_left">
+				<div id="photo_sec">
+					<div id="photo">
+						<img src="{image}"/>
+					</div>
+					<div id="photo_info">
+						<ul>
+							<li>{input1}</li>
+							<li>{input2}</li>
+							<li>{input3}</li>
+							<li>{input4}</li>
+						</ul>
+					</div>
+				</div>
+				<div class="underphoto_sec">
+					<ul id="left_links">
+						<li><a href="showstudentposts.php">Students</a></li>
+						<li><a href="showfacultyposts.php">Faculty</a></li>
+						<li><a href="showaluminiposts.php">Alumini</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div id="main_right">
+
+				<div id="userinfo" name="userinfo">
+					<ul id="detaillist" name="detaillist">
+						<li class="listcontent">TYPE : 			{type}</li>
+						<li class="listcontent">DOB  : 			{dob}</li>
+						<li class="listcontent">Email: 			{email}</li>
+						<li class="listcontent">phone: 			9411239491</li>
+						<li class="listcontent">Hostler: 	Yes</li>
+					</ul>
+				</div>
+
+<hr/>
+
+				<div id="addinfo" name="addinfo">
+					<form id="addform" method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
+					</form>
+				</div>
+				
+				<div id="showmtpostsheader" name="showmtpostsheader">			
+					<h3 style="margin-left:200px;">Posts</h3>
+				</div>		
+				<hr/>
+				<div id="showmtposts" name="showmtposts">
+				</div>
+			</div>
+		</div>
+	</body>

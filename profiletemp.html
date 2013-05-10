@@ -1,0 +1,74 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="profiletemp.css">
+</head>
+<body>
+	<header id="header">
+		<nav id="top_navigation">
+			<ul id="toplist">
+				<li><a href="home.php">Home</a></li>
+				<li><a href="profile.php">Profile</a></li>
+				<li><a href="#">Settings</a></li>
+				<li><a href="logout.php">Logout</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<div id="profmain" name="profmain">
+		
+		<div id="profimgcover" name="profimgcover" class="blkcommon">
+			<img src="{image}" id="profimg" name="profimg"/>
+			<h3>{input1}</h3>
+		</div>
+
+		<div id="profblk1" name="profblk1" class="blkcommon">
+			<ul id="blk1list" name="blk1list">
+				<li class="listheader">Contact Me</li>
+<hr>
+				<li class="listcontent">{email}</li>
+				<li class="editlistcontent"><a href="#" onclick="giveemail(); return false;">Give Alternate Email</a></li>
+				<li class="editlistcontent"><a href="#" onclick="givephone(); return false;">Give Phone Number</a></li>
+				<li class="editlistcontent"><a href="#" onclick="givefb(); return false;">Give facebook id</a></li>
+				<li class="editlistcontent"><a href="#" onclick="givetwitter(); return false;">Give Twitter id</a></li>
+			</ul>
+		</div>
+
+		<div id="profblk2" name="profblk2" class="blkcommon">
+			<ul id="blk2list" name="blk2list">
+				<li class="listheader">About me</li>
+<hr>
+				<li class="listcontent">{type}</li>
+				<li class="listcontent">{input2}</li>
+				<li class="listcontent">{input3}</li>
+				<li class="listcontent">{input4}</li>
+				<li class="listcontent">{dob}</li>
+<!--				<li class="editlistcontent"><a href="#" onclick="giveloc(); return false;">Hosteler?</a></li>-->
+				<li class="editlistcontent"><a href="#" onclick="giveskills(); return false;">Add your skills</a></li>
+			</ul>
+		</div>
+	
+
+		<div id="profblk3" name="profblk3" class="blkcommon">
+			<ul id="blk3list" name="blk3list">
+				<li class="listheader">Projects </li>
+<hr>
+				<li class="editlistcontent"><a href="#" onclick="giveproject(); return false;">project 1</a></li>
+				<li class="editlistcontent"><a href="#" onclick="giveproject(); return false;">project 2</a></li>
+				<li class="editlistcontent"><a href="#" onclick="giveproject(); return false;">project 3</a></li>
+				<li class="editlistcontent"><a href="#" onclick="giveproject(); return false;">project 4</a></li>
+				<li class="editlistcontent"><a href="#" onclick="giveproject(); return false;">project 5</a></li>	
+			</ul>
+		</div>
+
+	<div id="profblk4" name="profblk4" class="blkcommon">
+			<ul id="blk4list" name="blk4list">
+				<li class="listheader">I love. ..</li>
+<hr>
+				<li class="editlistcontent"><a href="#" onclick="giveAOI(); return false;">add Area of Interests</a></li>
+				<li class="editlistcontent"><a href="#" onclick="givehobbies(); return false;">add Hobbies</a></li>
+			</ul>
+		</div>
+
+	</div>
+</body>
+</html>

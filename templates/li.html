@@ -1,0 +1,68 @@
+	<script type="text/javascript">
+		var ele=document.getElementById("toadd");
+		ele.innerHTML="done with comments";
+	</script>
+
+<li class="li_items">
+
+	<div class="user_pic floatleft" name="user_pic">
+		<img src="{uimgsrc}" width="70px" height="70px"/>
+	</div>
+
+	<ul class="post_info" name="post_content_{poid}" id="post_content_{poid}">
+		<li>
+			<table rows="1" cols="2">
+				<tr>
+					<td>
+						<div class="user_name" name="user_name">
+						<a href="profile.php?id={posterid}" >{ufname}</a>
+						</div>
+					</td>
+					<td>
+						<div class="time" name="posttime_{poid}" id="posttime_{poid}">
+						{ptime}
+						<div>
+					</td>
+				</tr>
+			</table>
+		</li>
+
+		<li>
+			<div class="user_post" name="user_post">
+				<p>{upost}</p>
+			</div>
+		</li>
+
+		<br/>
+
+		<li>
+			<div id="comment_strip" name="comment_strip">
+				<form id="commentform_{poid}" name="commentform_{poid}" method="post">
+					<table id="commenttable" name="commenttable" rows="1" cols="2">
+						<tr>
+							<td class="commenttd1" valign="top"><textarea id="commentta_{poid}" name="commentta_{poid}" placeholder="write comment ..."></textarea></td>
+							<td class="commenttd2" valign="top"><input type="submit" name="commentsubmitbtn_{poid}" id="commentsubmitbtn_{poid}" value="comment" onclick="savecomment({poid}); return false;"></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</li>
+
+<br/>
+
+		<li>
+			<ul id="commentlist_{poid}" name="commentlist_{poid}">
+				{comments}
+			</ul>
+		</li>
+
+		<li id="noofcomments_{poid}" name="noofcomments_{poid}" style="color:red;"></li>
+	
+		<li id="toadd_{poid}" name="toadd_{poid}"></li>
+
+	</ul>
+
+</li>
+
+<hr/>
+

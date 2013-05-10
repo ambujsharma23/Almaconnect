@@ -1,0 +1,72 @@
+div#edit_photo
+{
+border-top:1px dashed;
+padding-left:37px;
+}
+
+div#main_right
+{
+margin-left:220px;
+border:1px solid;
+background:#bbbbbb;
+}
+
+div#personal_tab
+{
+margin:30px;
+border:1px solid; 
+}
+
+table#info_box_list
+{
+line-height:10px;
+}
+
+div#personal_tab form
+{
+margin:30px 0px 30px 120px;
+}
+
+input#usernameid
+{
+margin-left:63px;;
+}
+
+input#passwordid
+{
+margin-left:36px;
+}
+
+input#newpassid
+{
+margin-left:28px;
+}
+
+input#submitbtnid
+{
+margin-left:144px;
+}
+
+div#right_list a
+{
+padding:5px 10px 5px 10px;
+margin:5px;
+border:1px solid;
+position:relative;
+top:10px;
+background:#ff0000;
+color:#000000;
+}
+
+.hide
+{
+display:none;
+}
+.show
+{
+display:block;
+}
+.show_info_area
+{
+margin:30px 0px 30px 120px;
+}

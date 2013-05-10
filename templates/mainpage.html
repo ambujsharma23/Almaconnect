@@ -1,0 +1,102 @@
+<html lang="en-US" dir="ltr">
+	<head>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="css/common.css"/>
+		<script type="text/javascript" src="scripts/common.js"></script>
+		<link rel="stylesheet" href="css/{pagetype}page.css"/>
+		<script type="text/javascript" src="scripts/{pagetype}script.js"></script>
+		<script type="text/javascript">
+			window.onload=function()
+				{
+					callUpPart("{pagetype}");
+					callFeed("{pagetype}");
+//					setInterval("showNewPosts('{pagetype}')",30000);
+					setInterval("getAll('{pagetype}')",30000);
+				//	setInterval("showNewComments()",60000);
+				}
+		</script>
+	</head>
+	
+	<body>
+
+		<header id="header">
+			<nav id="top_navigation">
+				<ul id="toplist">
+					<li><a href="home.php">Home</a></li>
+					<li><a href="profile.php?id={userid}">Profile</a></li>
+					<li><a href="#">Settings</a></li>
+					<li><a href="logout.php">Logout</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<div id="main">
+			<div id="main_left">
+				<div id="photo_sec">
+					<div id="photo">
+						<img src="{image}" id="userimage" name="userimage"/>
+					</div>
+					<div id="browsefile" name="browsefile">
+					</div>
+					<div id="addpiccover" name="addpiccover">
+						<a href="#" onclick="addpic(); return false;" id="addpiclink" name="addpiclink">Add Pic</a>					
+					</div>
+					<div id="photo_info">
+						<ul>
+							<li>{input1}</li>
+							<li>{input2}</li>
+							<li>{input3}</li>
+							<li>{input4}</li>
+						</ul>
+					</div>
+				</div>
+				<div class="underphoto_sec">
+					<ul id="left_links">
+						<li><a href="getmtpage.php?mtype=student">Student Posts</a></li>
+						<li><a href="getmtpage.php?mtype=alumini">Alumini Posts</a></li>
+						<li><a href="getmtpage.php?mtype=faculty">Faculty Posts</a></li>
+					</ul>
+				</div>
+			</div>
+
+<!--			<script type="text/javascript">
+				var image=document.getElementById("userimage");
+				if(image.src.value!="blank.jpeg")
+					{
+				var add_pic_link=document.getElementById("addpiccover");
+				add_pic_link.style.visibility="hidden";
+					}
+			</script>
+-->
+
+
+			<div id="main_right">
+
+				<div id="mtposts" name="mtposts">
+				</div>
+			
+				<div id="rightupper" name="rightupper">
+				</div>
+
+				<div id="hor_line" name="hor_line">
+				</div>
+	
+				<div id="rightlower" name="rightlower">
+					<div id="wall" name="wall">
+						<ul class="post_list margintenpx" name="post_list" id="post_list">
+
+<!--							<li name="post_list_fc" id="post_list_fc"></li>-->
+						</ul>
+
+						<div name="showolderpostscover" id="showolderpostscover">
+							<a href="#" onclick="showOlderPosts('{pagetype}'); return false;" name="showolderpostsbtn" id="showolderpostsbtn">Show Older Posts</a>
+						</div>
+					</div>			
+				</div>
+
+			</div>
+		</div>
+
+
+	</body>
+</html>

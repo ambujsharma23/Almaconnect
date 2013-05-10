@@ -1,0 +1,52 @@
+<ul>
+<li class="li_items">
+
+	<div class="user_pic floatleft" name="user_pic">
+		<img src="{uimgsrc}" width="70px" height="70px"/>
+	</div>
+
+	<ul class="post_info" name="post_content{id}" id="post_content{id}">
+		<li>
+			<div class="user_name" name="user_name">
+				<a href="profile.php?id={posterid}" >{ufname}</a>
+			</div>
+		</li>
+
+		<li>
+			<div class="user_post" name="user_post">
+				<p>{upost}</p>
+			</div>
+		</li>
+
+		<br/>
+
+		<li>
+			<div id="comment_strip" name="comment_strip">
+				<form id="commentform{id}" name="commentform{id}" method="post">
+					<table id="commenttable" name="commenttable" rows="1" cols="2">
+						<tr>
+							<td class="commenttd1" valign="top"><textarea id="commentta{id}" name="commentta{id}" placeholder="write comment ..."></textarea></td>
+							<td class="commenttd2" valign="top"><input type="submit" name="commentsubmitbtn{id}" id="commentsubmitbtn{id}" value="comment" onclick="savecomment({id}); return false;"></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</li>
+<br/>
+		<li>
+			<ul id="commentlist{id}" name="commentlist{id}">
+				{comments}
+			</ul>
+		</li>
+
+		<li id="noofcomments{id}" name="noofcomments{id}" style="color:red;">
+			
+		</li>
+
+
+	</ul>
+</li>
+</ul>
+
+<hr/>
+
